@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Comments</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<body dir="rtl" class=" bg-light">
+<div class="container p-5 my-5 bg-dark text-white rounded">
+    <div class="row">
+        <div >
+            {% for comment in comments %}
+                <label>نام سایت:</label>
+                <p class="p-2 bg-light text-dark rounded ">{{ comment.site_name }}</p>
+
+                <label>میزبانی با شرکت ما یا خودشان:</label>
+                <p class="p-2 bg-light text-dark rounded "> {{ comment.host }}</p>
+
+                <label>سمت درخواست کننده در مجموعه خودشان:</label>
+                <p class="p-2 bg-light text-dark rounded "> {{ comment.your_post }}</p>
+
+                <label>سابقه همکاری با طراح سایت داشتن یا خیر:</label>
+                <p class="p-2 bg-light text-dark rounded "> {{ comment.web_design }}</p>
+
+                <label>چه سیستم مدیریت محتوایی؟</label>
+                <p class="p-2 bg-light text-dark rounded "> {{ comment.site_system }}</p>
+
+
+                <label>در چه زمینه ای قصد فعالیت دارند؟</label>
+                <p class="p-2 bg-light text-dark rounded "> {{ comment.work_field }}</p>
+
+                <label>چه بودجه ای برای سایت اختصاص داده اید؟</label>
+                <p class="p-2 bg-light text-dark rounded "> {{ comment.budget }}</p>
+
+                <label>نیاز به پشتیبانی دارند؟</label>
+                <p class="p-2 bg-light text-dark rounded "> {{ comment.support }}</p>
+
+                <label>بودجه اختصاصی:</label>
+                <p class="p-2 bg-light text-dark rounded "> {{ comment.budget_amount }}</p>
+
+                 <label>پشتیبانی به عهده چه کسی باشد؟</label>
+                <p class="p-2 bg-light text-dark rounded "> {{ comment.who_support }}</p>
+
+
+                <label>نیازمند پشتیبانی فنی یا محتوایی:</label>
+                <p class="p-2 bg-light text-dark rounded "> {{ comment.content_technical }}</p>
+
+                <label>با شخص یا شرکتی همکاری داشتن در طراحی سایت ؟ و علت قطع همکاری</label>
+                <p class="p-2 bg-light text-dark rounded "> {{ comment.cooperation }}</p>
+
+                <label>توضیحات تکمیلی:</label>
+                <p class="p-2 bg-light text-dark rounded "> {{ comment.details }}</p>
+
+                <label>اطلاعات تماس:</label>
+                <p class="p-2 bg-light text-dark rounded "> {{ comment.contacts }}</p>
+
+
+            {% endfor %}
+        </div>
+    </div>
+</div>
+</body>
+</html>
